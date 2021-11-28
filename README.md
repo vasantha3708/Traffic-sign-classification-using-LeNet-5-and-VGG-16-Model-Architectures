@@ -84,7 +84,7 @@
 
 * we will run minimize() function on the optimizer which use backprobagation to update the network and minimize our training loss.
 
-## 1.LeNet-5:
+## 1. LeNet-5 architecture:
 
 LeNet-5 is a convolutional network designed for handwritten and machine-printed character recognition. It was introduced by the famous Yann LeCun in his paper Gradient-Based Learning Applied to Document Recognition in 1998. Although this ConvNet is intended to classify hand-written digits, we're confident it have a very high accuracy when dealing with traffic signs, given that both hand-written digits and traffic signs are given to the computer in the form of pixel images.
 
@@ -116,13 +116,13 @@ LeNet-5 is a convolutional network designed for handwritten and machine-printed 
 
 **Layer 5 (Fully Connected)** This should have 10 outputs.
 
-## 2. VGGNet:
+## 2. VGGNet architecture:
 
 * Their main contribution of VGGNet is a thorough evaluation of networks of increasing depth using an architecture with very small (3x3) convolution filters, which shows that a significant improvement on the prior-art configurations can be achieved by pushing the depth to 16-19 weight layers.
 
-- The original VGGNet architecture has 16-19 layers, but I've excluded some of them and implemented a modified version of only 12 layers to save computational resources.
+* The original VGGNet architecture has 16-19 layers, but I've excluded some of them and implemented a modified version of only 12 layers to save computational resources.
 
-- This ConvNet follows these steps:
+* This ConvNet follows these steps:
 
 **Input => Convolution => ReLU => Convolution => ReLU => Pooling => Convolution => ReLU => Convolution => ReLU => Pooling => Convolution => ReLU => Convolution => ReLU => Pooling => FullyConnected => ReLU => FullyConnected => ReLU => FullyConnected**
 
@@ -189,7 +189,7 @@ Activation. Your choice of activation function.
 Now, we'll use the testing set to measure the accuracy of the model over unknown examples. We've been able to reach a Test accuracy of 97.6%. A remarkable performance.
 
 - we'll plot the confusion matrix to see where the model actually fails.
-- - We observe some clusters in the confusion matrix above. It turns out that the various speed limits are sometimes misclassified among themselves. Similarly, traffic signs with traingular shape are misclassified among themselves. We can further improve on the model using hierarchical CNNs to first identify broader groups (like speed signs) and then have CNNs to classify finer features (such as the actual speed limit).
+- We observe some clusters in the confusion matrix above. It turns out that the various speed limits are sometimes misclassified among themselves. Similarly, traffic signs with traingular shape are misclassified among themselves. We can further improve on the model using hierarchical CNNs to first identify broader groups (like speed signs) and then have CNNs to classify finer features (such as the actual speed limit).
 
 ## Step 6: Testing the Model on New Images
 
